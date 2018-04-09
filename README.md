@@ -1,0 +1,13 @@
+# Video download script
+- Go to your livestream with Chrome.
+- Open Developer Tools
+- Go to Tab Network
+- Find one of the media files. They look like media_xxxxxxxxxx_2.ts or so.
+- Copy your request URL. Something like: http://cdnxxd.streampartner.nl:1935/newmediasystems_xx_ond/mp4:xxxx.mp4/media_xxxxxxxxxx_2.ts
+- Find the last number of your stream by skipping to the last second of the stream. In our example this is _199.ts
+- Edit download.sh, edit the found URL and change the number 199 to the desired ending.
+- Edit combine.sh, edit the found media_xxxxxxxxxx_2.ts name and the number 199 to the desired ending.
+- chmod +x download.sh and combine.sh
+- Execute download.sh, wait.
+- Execute combine.sh
+- You got your video backupped for free as it should be instead of $$$. The result is video.mp4
